@@ -1,4 +1,4 @@
-# GiGlink
+# GiGWork
 
 > A web platform connecting young people (ages 14–25) with short-term, flexible gig work opportunities, where we help businesses get small tasks done.
 
