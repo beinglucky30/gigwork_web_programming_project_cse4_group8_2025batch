@@ -1,1 +1,54 @@
+/* =====================================================
+   GiGWork - My Gigs Dashboard
+   Theme: Navy & Coral
+   ===================================================== */
 
+
+/* =====================================================
+   1. THEME VARIABLES + BASE STYLES
+   ===================================================== */
+:root {
+  --navy:  #14213d;   /* main text + dark buttons */
+  --coral: #f0604d;   /* accent colour */
+  --mint:  #eef7f6;   /* page + soft backgrounds */
+  --card:  #ffffff;   /* card background */
+  --line:  #e3eceb;   /* borders + dividers */
+  --muted: #6b7a86;   /* secondary text */
+}
+
+/* Reset default spacing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Page layout: sidebar (210px) + main content */
+body {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  min-height: 100vh;
+  font: 13px/1.4 system-ui, Arial, sans-serif;
+  color: var(--navy);
+  background: var(--mint);
+}
+
+/* Serif font for headings and prices */
+h1,
+h2,
+h3,
+.price {
+  font-family: Georgia, serif;
+}
+
+/* Small helper text */
+small,
+.muted {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* Coral text helper */
+.coral {
+  color: var(--coral);
+}
