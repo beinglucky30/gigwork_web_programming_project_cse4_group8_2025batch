@@ -1,1 +1,236 @@
+<!-- =========================
+     COMMIT 1: Create basic HTML structure
+     HTML document setup: doctype, language, page title,
+     and the link to our external CSS file.
+========================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- This line makes the page fit phone screens properly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GiGWork - Performance &amp; Reputation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <!-- .layout puts the sidebar and the main content side by side -->
+  <div class="layout">
+
+    <!-- =========================
+         COMMIT 2: Add sidebar navigation
+         The left menu: logo, user card and page links.
+         The "Performance" link is marked "active".
+    ========================= -->
+    <aside class="sidebar">
+      <a href="#" class="logo">GiG<span>Work</span></a>
+
+      <div class="user-card">
+        <strong>Shivam Maurya</strong>
+        <p>University Student &bull; CS</p>
+        <a href="#">View Profile &rarr;</a>
+      </div>
+
+      <nav class="nav">
+        <ul>
+          <li><a href="#">&#127968; Home</a></li>
+          <li><a href="#">&#128188; My Gigs</a></li>
+          <li><a href="#">&#129517; Explore</a></li>
+          <li><a href="#" class="active">&#128200; Performance</a></li>
+          <li><a href="#">&#128737; Safety Dashboard</a></li>
+          <li><a href="#">&#9881; Settings</a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <a href="#">Help &amp; Support</a>
+        <a href="#" class="sign-out">Sign Out</a>
+      </div>
+    </aside>
+
+    <div class="content">
+
+      <!-- =========================
+           COMMIT 3: Add top bar and page heading
+           Top bar has the search box. Below it is the hero
+           heading area with title, badges and two buttons.
+      ========================= -->
+      <header class="topbar">
+        <input type="search" class="search" placeholder="Search gigs, employers, badges..." aria-label="Search">
+        <span class="avatar">SM</span>
+      </header>
+
+      <main class="main">
+
+        <section class="page-header">
+          <div>
+            <span class="badge badge-coral">Reputation Tier: Diamond Fellow</span>
+            <span class="badge badge-grey">Verified Student Worker</span>
+            <h1>Your Performance &amp; Reputation</h1>
+            <p>Track your work milestones, ratings, earnings progress and professional verification credentials.</p>
+          </div>
+          <div class="header-buttons">
+            <a href="#" class="btn btn-light">Share Public Profile</a>
+            <a href="#" class="btn btn-dark">Download Verified Resume / Report</a>
+          </div>
+        </section>
+
+        <!-- =========================
+             COMMIT 4: Add statistics cards
+             Five small cards that show key numbers.
+        ========================= -->
+        <section class="stats">
+          <article class="stat-card">
+            <h2>Gigs Completed</h2>
+            <p class="stat-number">18</p>
+            <small>100% completion rate</small>
+          </article>
+          <article class="stat-card">
+            <h2>Total Earned</h2>
+            <p class="stat-number">&#8377;48,500</p>
+            <small>Avg &#8377;2,890 / gig</small>
+          </article>
+          <article class="stat-card">
+            <h2>Average Rating</h2>
+            <p class="stat-number">4.95 <span class="star">&#9733;</span></p>
+            <small>16 client reviews</small>
+          </article>
+          <article class="stat-card">
+            <h2>Response Rate</h2>
+            <p class="stat-number">98%</p>
+            <small>&lt; 15 min avg response</small>
+          </article>
+          <article class="stat-card">
+            <h2>On-Time Delivery</h2>
+            <p class="stat-number">100%</p>
+            <small>Zero missed deadlines</small>
+          </article>
+        </section>
+
+        <!-- .columns creates two columns: wide left, narrow right -->
+        <div class="columns">
+
+          <div class="column-left">
+
+            <!-- =========================
+                 COMMIT 5: Add earnings chart
+                 A bar chart built only with HTML and CSS.
+                 Each bar's height comes from a class (h-1 to h-6).
+            ========================= -->
+            <section class="card">
+              <h2>Monthly Earnings &amp; Completed Gigs</h2>
+              <p class="muted">Past 6 months payout trajectory and delivery volume</p>
+
+              <div class="chart">
+                <div class="bar-box"><span class="bar-value">&#8377;12k</span><div class="bar h-1"></div></div>
+                <div class="bar-box"><span class="bar-value">&#8377;20k</span><div class="bar h-2"></div></div>
+                <div class="bar-box"><span class="bar-value">&#8377;27k</span><div class="bar h-3"></div></div>
+                <div class="bar-box"><span class="bar-value">&#8377;24k</span><div class="bar h-4"></div></div>
+                <div class="bar-box"><span class="bar-value">&#8377;40k</span><div class="bar h-5"></div></div>
+                <div class="bar-box"><span class="bar-value">&#8377;37k</span><div class="bar h-6"></div></div>
+              </div>
+              <div class="months">
+                <span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span>
+              </div>
+
+              <div class="chart-summary">
+                <span>&#128200; +166% growth since May</span>
+                <span>3.0 avg gigs / month</span>
+                <span>100% escrow released</span>
+              </div>
+            </section>
+
+            <!-- =========================
+                 COMMIT 6: Add experience timeline
+                 A vertical list of completed gigs. Each item
+                 has a coloured dot on the left border line.
+            ========================= -->
+            <section class="card">
+              <h2>Experience &amp; Verified Milestones</h2>
+              <p class="muted">Validated academic and professional project history</p>
+
+              <ol class="timeline">
+                <li class="timeline-item">
+                  <small>Oct 2024</small>
+                  <h3>Advanced Calculus Tutor (6 hours)</h3>
+                  <p>Client: Aarav Sharma &bull; Rate: &#8377;750/hr</p>
+                  <p class="quote"><span class="star">&#9733;</span> 5.0 "Understood college-level multivariable concepts immediately."</p>
+                </li>
+                <li class="timeline-item">
+                  <small>Sept 2024</small>
+                  <h3>Python Data Wrangling Lab Project (15 hours)</h3>
+                  <p>Client: Dr. Harish Narayanan &bull; Bio-Informatics Lab</p>
+                  <p class="quote"><span class="star">&#9733;</span> 5.0 "Impeccable Pandas pipelines and clean documentation."</p>
+                </li>
+                <li class="timeline-item">
+                  <small>Aug 2024</small>
+                  <h3>Web Redesign &amp; Asset Optimization</h3>
+                  <p>Client: Cafe Chai &amp; Co. (Kavya Nair)</p>
+                  <p class="quote"><span class="star">&#9733;</span> 4.9 "Increased our mobile load speed significantly."</p>
+                </li>
+                <li class="timeline-item">
+                  <small>June 2024</small>
+                  <h3>Platform Initiation</h3>
+                  <p>First Verified Campus Gig completed with verified institution badge.</p>
+                </li>
+              </ol>
+            </section>
+          </div>
+
+          <div class="column-right">
+
+            <!-- =========================
+                 COMMIT 7: Add identity and trust card
+                 A checklist of verifications plus a progress bar.
+            ========================= -->
+            <section class="card">
+              <h2>Identity &amp; Trust Status</h2>
+              <ul class="trust-list">
+                <li><span>Government Photo ID<small>Real ID Passport Validated</small></span><b class="tick">&#10003;</b></li>
+                <li><span>University Student Status<small>stanford.edu domain verified</small></span><b class="tick">&#10003;</b></li>
+                <li><span>Background Check<small>Clear record (Checkr verified)</small></span><b class="tick">&#10003;</b></li>
+                <li><span>Phone &amp; 2FA Protection<small>Active hardware authenticator</small></span><b class="tick">&#10003;</b></li>
+              </ul>
+              <p class="score-label"><span>Profile Trust Score</span><span>100 / 100</span></p>
+              <div class="progress"><div class="progress-fill"></div></div>
+            </section>
+
+            <!-- =========================
+                 COMMIT 8: Add skills and reviews
+                 Skill tags and client review cards.
+            ========================= -->
+            <section class="card">
+              <h2>Verified Skills &amp; Endorsements</h2>
+              <div class="tags">
+                <span class="tag">Python Programming 14</span>
+                <span class="tag">Mathematics &amp; Calculus 18</span>
+                <span class="tag">HTML/CSS Web Design 11</span>
+                <span class="tag">Research Assistance 9</span>
+                <span class="tag">Content Writing 7</span>
+                <span class="tag">Event Coordination 6</span>
+              </div>
+            </section>
+
+            <section class="card">
+              <h2>Recent Client Reviews <span class="star">&#9733; 4.95</span></h2>
+
+              <article class="review">
+                <h3><span class="avatar small">HN</span> Dr. Harish Narayanan <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span></h3>
+                <p>"Shivam cleaned and parsed over 40,000 biological records ahead of our deadline."</p>
+              </article>
+              <article class="review">
+                <h3><span class="avatar small coral">PS</span> Priya Sharma <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span></h3>
+                <p>"My daughter moved from a B- to an A in AP Pre-Calculus after 4 tutoring sessions."</p>
+              </article>
+
+              <a href="#" class="btn btn-mint">View All 16 Verified Reviews &rarr;</a>
+            </section>
+          </div>
+
+        </div>
+      </main>
+    </div>
+  </div>
+
+</body>
+</html>
