@@ -103,3 +103,45 @@ small,
 .side .bottom {
   margin-top: auto;
 }
+
+/* =====================================================
+   3. MAIN AREA + TOP BAR + PAGE HEADER
+   ===================================================== */
+main {
+  max-width: 1000px;
+  padding: 16px 24px;
+}
+
+/* Search bar row */
+.top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.top input {
+  flex: 1;
+}
+
+/* Shared style for inputs and dropdowns */
+input,
+select {
+  padding: 8px 10px;
+  font: inherit;
+  background: var(--mint);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+/* Title + action buttons */
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: 30px;
+}
