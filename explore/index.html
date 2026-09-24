@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Basic document metadata -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore GiGs - GiGWork</title>
+
+  <!-- Only our own CSS file is used -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Fixed navigation sidebar -->
+  <aside class="sidebar">
+    <div>
+      <!-- Brand -->
+      <div class="brand">
+        <span class="brand-name">GiGWork</span>
+        <span class="brand-pro">PRO</span>
+      </div>
+
+      <!-- Mini user profile -->
+      <div class="profile-card">
+        <div class="avatar">VS</div>
+        <div>
+          <strong>Vaidhav Singhal</strong>
+          <small>Student profile</small>
+        </div>
+      </div>
+
+      <!-- Main navigation -->
+      <nav class="navigation" aria-label="Main navigation">
+        <a href="#"><span class="nav-icon">⌂</span>Home</a>
+        <a class="active" href="#"><span class="nav-icon">⌕</span>Explore</a>
+        <a href="#"><span class="nav-icon">▣</span>My GiGs <b>3</b></a>
+        <a href="#"><span class="nav-icon">◒</span>Performance</a>
+        <a href="#"><span class="nav-icon">◉</span>Safety Dashboard</a>
+        <a href="#"><span class="nav-icon">⚙</span>Settings</a>
+      </nav>
+    </div>
+
+    <!-- Sidebar footer -->
+    <div class="sidebar-footer">
+      <a href="#">? &nbsp; Help &amp; Support</a>
+      <a href="#">↪ &nbsp; Sign Out</a>
+    </div>
+  </aside>
+
+  <!-- Main page content -->
+  <main class="main-content">
+    <!-- User bar -->
+    <header class="topbar">
+      <div class="current-user">
+        <span class="avatar small">VS</span>
+        <strong>Vaidhav Singhal</strong>
+        <span>⌄</span>
+      </div>
+    </header>
+
+    <!-- Page introduction -->
+    <section class="welcome-card">
+      <div>
+        <span class="eyebrow">OPPORTUNITIES</span>
+        <h1>Explore GiGs</h1>
+        <p>Discover opportunities that match your skills, schedule, and academic interests.</p>
+      </div>
+
+      <span class="verified-badge">✓ &nbsp; 6 Verified GiGs Available Today</span>
+    </section>
+
+    <!-- Search and filter form.
+         The reset button works using native HTML form behavior. -->
+    <form class="filter-card" id="gig-filters">
+      <div class="search-row">
+        <input
+          type="search"
+          name="search"
+          placeholder="Search gigs by title, skill, company, or campus location..."
+          aria-label="Search gigs"
+        >
+        <button class="button primary" type="submit">Search</button>
+      </div>
+
+      <div class="filter-grid">
+        <label>
+          Category
+          <select name="category">
+            <option>All Categories</option>
+            <option>Childcare</option>
+            <option>Social Media</option>
+            <option>Education</option>
+            <option>Creative Services</option>
+            <option>Technology</option>
+          </select>
+        </label>
+
+        <label>
+          Skills
+          <select name="skills">
+            <option>Baby Care, Reels Editing</option>
+            <option>Baby Care</option>
+            <option>Instagram Management</option>
+            <option>Python, Pandas</option>
+            <option>Assembly</option>
+            <option>Data Entry</option>
+          </select>
+        </label>
+
+        <label>
+          Pay
+          <select name="pay">
+            <option>₹300 - ₹2,500+</option>
+            <option>₹300 - ₹600 / hr</option>
+            <option>₹600 - ₹1,000 / hr</option>
+            <option>₹1,000+ / hr</option>
+          </select>
+        </label>
+
+        <label>
+          Location
+          <select name="location">
+            <option>Within 5 miles</option>
+            <option>Within 1 mile</option>
+            <option>Within 10 miles</option>
+            <option>Remote</option>
+          </select>
+        </label>
+
+        <label>
+          Format
+          <select name="format">
+            <option>All (Remote &amp; In-person)</option>
+            <option>Remote</option>
+            <option>In-person</option>
+          </select>
+        </label>
+
+        <label>
+          Level
+          <select name="level">
+            <option>High School / College</option>
+            <option>High School</option>
+            <option>College Student</option>
+            <option>Any Level</option>
+          </select>
+        </label>
+
+        <label>
+          Sort
+          <select name="sort">
+            <option>Most Relevant</option>
+            <option>Highest Pay</option>
+            <option>Newest</option>
+            <option>Closest Location</option>
+          </select>
+        </label>
+
+        <!-- Native reset: clears the input and restores select defaults -->
+        <button class="reset-button" type="reset">Reset</button>
+      </div>
+    </form>
+
+    <!-- Featured opportunity -->
+    <section class="featured-banner">
+      <div>
+        <span class="featured-label">DEPARTMENT FELLOWSHIP PRIORITY MATCH</span>
+        <h2>Bioinformatics Lab Research Lead Assistant</h2>
+        <p>Faculty of Life Sciences • 6-month funded student stipend (₹600/hr, 10 hrs/wk) • Genomic sequence parsing and documentation.</p>
+      </div>
+      <span class="status-pill">High Stipend</span>
+      <button class="button coral" type="button">Apply with Profile</button>
+      <button class="dismiss" type="button" aria-label="Dismiss">×</button>
+    </section>
+
+    <!-- Gig listing grid -->
+    <section class="gig-grid" aria-label="Available gigs">
+      <article class="gig-card">
+        <div class="card-image daycare-image">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_ycfXbnWFY0C-zXfMkHGQG0zljPEm8lVoikZssLpFInzgGtjqVlYiVh45XCao98usjJDkaBnW2KNLlqElBH4actM920ZmnkXFTEUdSyXym26Eue-feEuDX2S4ot5g4gXsZkw7tBRZ6dn_sUiVHdbTxPV8LttUMS_3LKPk3fQE1dalRXDGjs-v9f2W_5uZIBZ0bBm0eArWHLPTpQbv4GG2sFsRf_9LUWJShi-6DZrMWHObSTXFI8EnMqmWt-WmZw9Dhw" alt="Daycare assistant caring for children">
+          
+          <span>Little Stars Daycare</span>
+          <b>Escrow</b>
+        </div>
+        <div class="card-content">
+          <h3>Daycare Assistant &amp; Baby Care Helper</h3>
+          <p>Help care for babies and toddlers at a trusted daycare center. Assist with playtime, reading, feeding support, and tidying.</p>
+          <div class="pay-row"><strong>₹450</strong><span>/ hr</span><small>Flexible 3-5 hrs/day</small></div>
+          <div class="chips"><i>Baby Care</i><i>Child Safety</i><i>Patience</i></div>
+        </div>
+        <div class="card-footer"><span>Little Stars Daycare</span><strong>★ 4.9 <small>(42)</small></strong></div>
+        <button class="apply-button" type="button">View GiG &amp; Apply</button>
+      </article>
+
+      <article class="gig-card">
+        <div class="card-image instagram-image">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMaJQg0_WV0WI8CBhZoFJUQRNHPOPWA-xYdZ-v8_yJoC60GYUiuHtPmH0l5veuWCLmYEBX1iAH2V9SzsDWYGz6cQpbp_W6TtlSn0qsmhl5AY5BOJkxarRVVEs5i-gS85mlFSUwsOKjBVKhap_l_vcSig47EaW03fUF4eR9L0Cn9hE30E5fVYxoW_i2uC6cLKoRGEaueDS3MO5OF6lQAJKUE5_fm9_F0LCLNQA9GtEnhKr6Xk4AQa0ZHoESs0JfBLGyCw" alt="Instagram reels and post editing">
+          
+          <span>CreatorHub Media</span>
+          <b>Remote</b>
+        </div>
+        <div class="card-content">
+          <h3>Instagram Reels &amp; Post Editing Assistant</h3>
+          <p>Help a small creator plan Instagram content, edit short reels, write captions, and schedule engaging posts.</p>
+          <div class="pay-row"><strong>₹550</strong><span>/ hr</span><small>₹8,500 Monthly</small></div>
+          <div class="chips"><i>Instagram</i><i>Reels Editing</i><i>Canva</i></div>
+        </div>
+        <div class="card-footer"><span>CreatorHub Media</span><strong>★ 5.0 <small>(11)</small></strong></div>
+        <button class="apply-button" type="button">View GiG &amp; Apply</button>
+      </article>
+
+      <article class="gig-card">
+        <div class="card-image python-image">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxOdH0JJ9AKCU9AN3X8OZ95yl7pLW_-cAMHX_HGOmkdt7O4ZJkbyo3mPhq4l6wEQ9mHujCDBjsWb3lVFsW8BFvWFq6RkP-GY7G6oevs37etahsprxSCkDAo1ugtGa6Gd8JwsrVyMb2NWELopm4ySqpUISVek5MpqfhJp8J-j2SFn0ISFZ8bWwSTjcAyKqCsGNfp_qC7DWmnum-uO9H2XzHIVrVWYqecavwVfUCe5tYwn5QexC5bUY573684rHhDP8J0Q" alt="Python data research assistant">
+          
+          <span>Atmospheric Research Lab</span>
+          <b>Faculty</b>
+        </div>
+        <div class="card-content">
+          <h3>Python Data Cleansing for Research</h3>
+          <p>Normalize raw atmospheric telemetry data files, eliminate null records, and prepare clean outputs.</p>
+          <div class="pay-row"><strong>₹600</strong><span>/ hr</span><small>15 hrs total = ₹9,000</small></div>
+          <div class="chips"><i>Python</i><i>Pandas</i><i>Data Analysis</i></div>
+        </div>
+        <div class="card-footer"><span>Lab Director</span><strong>★ 4.9 <small>(7)</small></strong></div>
+        <button class="apply-button" type="button">View GiG &amp; Apply</button>
+      </article>
+
+      <article class="gig-card">
+        <div class="card-image furniture-image">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbrRVupVm97sBkxKUvYdZbRuyzcnWfwc0bDFou5spYBT6EjhjivvX6j7NCuaWzZdeXDUvXOw5EgJM7ck8fo8JUZErXNmdO7j7FqseAkvquPFki4-eTcpfIN3RGsJZZ2Ugf0st-Jl8PLK2RVRYbalUhf4y1PNjC-ooQqHQX2yKGBqBS7mOa3IBIn4FMz30BpbSIc1ySqp9VvNdBUlIwT4x114G2sKeBE8StoOt_5IlxHsxQ2kq1wQqQDN8dxZAOZ-pfbQ" alt="Move-in furniture assistant">
+          
+          <span>Campus Housing</span>
+          <b>Escrow</b>
+        </div>
+        <div class="card-content">
+          <h3>Move-In Packing &amp; Furniture</h3>
+          <p>Assist with building an IKEA study desk and shelving unit, plus shifting boxed books into a second-floor room.</p>
+          <div class="pay-row"><strong>₹500</strong><span>/ hr</span><small>Estimated 3 hours</small></div>
+          <div class="chips"><i>Assembly</i><i>Errands</i><i>Punctuality</i></div>
+        </div>
+        <div class="card-footer"><span>Grad Student</span><strong>★ 4.7 <small>(14)</small></strong></div>
+        <button class="apply-button" type="button">View GiG &amp; Apply</button>
+      </article>
+
+      <article class="gig-card">
+        <div class="card-image support-image">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtM9HIhMHMmXUX83Ukyl7gpfYZpbDbbcpPDvfcOOlrHQeVqMleLKAwWMuZL6pqm6Ae2Iwo1eDo5LD_lxdRsXvEu5NOQwRjqZSMpf5hp_E2ymNgd8hB65M4giHNCnMzg-B8MNx1coayIrnGNQBi-lF4EKUZYiasRI7c0MlJ2NvKr8I2OOwubXLkQCaGrfkHISBLdSErVsdQzFoMuhH0FIaY0lRLHy6rWMME0IoFu7sj9XYhGQ2VL2Cwz-af7S4vnb6zPQ" alt="Student IT support assistant">
+          
+          <span>Campus Tech Support</span>
+          <b>On-campus</b>
+        </div>
+        <div class="card-content">
+          <h3>Student IT Support Assistant</h3>
+          <p>Help students and faculty with basic device setup, software troubleshooting, and campus technology support.</p>
+          <div class="pay-row"><strong>₹450</strong><span>/ hr</span><small>Flexible 4-6 hrs/week</small></div>
+          <div class="chips"><i>Tech Support</i><i>Troubleshooting</i><i>Communication</i></div>
+        </div>
+        <div class="card-footer"><span>University IT Services</span><strong>★ 4.8 <small>(23)</small></strong></div>
+        <button class="apply-button" type="button">View GiG &amp; Apply</button>
+      </article>
+
+      <article class="gig-card">
+        <div class="card-image research-image">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYedQ71RW5xWGGaoc52cturvsHhKTfWp5NRe2WWM0PuYsmWBQ8s5freeHdInOAXgnMWvBHvazKOkXEP21slf8ohsjZaI9z79bjYBfGTxXzqrvnD1DseSQcZXsV-Ea_tJu_9zboqPHCwRI-hG2Jko8XeKQQFK3RGCgXERTmhjxJ2HEz2YQr4OuQp2pk7hEhi1EiMwOsxxQISDyeAFOf3zXLT_JY5t1T_h3l_8vXCxTD9yxNqu0mCT-8siDYktsTTDh6vw" alt="Research data entry assistant">
+          
+          <span>Research Analytics Lab</span>
+          <b>Faculty</b>
+        </div>
+        <div class="card-content">
+          <h3>Research Data Entry Assistant</h3>
+          <p>Organize research datasets, enter survey responses, check records, and maintain accurate documentation.</p>
+          <div class="pay-row"><strong>₹500</strong><span>/ hr</span><small>Approx. 8 hrs/week</small></div>
+          <div class="chips"><i>Data Entry</i><i>Excel</i><i>Research</i></div>
+        </div>
+        <div class="card-footer"><span>Research Analytics Lab</span><strong>★ 4.8 <small>(18)</small></strong></div>
+        <button class="apply-button" type="button">View GiG &amp; Apply</button>
+      </article>
+    </section>
+
+    <!-- Pagination -->
+    <footer class="pagination">
+      <span>Showing 1-6 of 128 gigs</span>
+      <div>
+        <button class="page active" type="button">1</button>
+        <button class="page" type="button">2</button>
+        <button class="page" type="button">3</button>
+        <button class="page" type="button">…</button>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
