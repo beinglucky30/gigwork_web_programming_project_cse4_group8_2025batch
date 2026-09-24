@@ -52,3 +52,54 @@ small,
 .coral {
   color: var(--coral);
 }
+
+
+/* =====================================================
+   2. SIDEBAR
+   ===================================================== */
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px;
+  background: #fff;
+  border-right: 1px solid var(--line);
+}
+
+/* Logo */
+.logo {
+  margin-bottom: 10px;
+  font: 700 20px Georgia, serif;
+}
+
+.logo span {
+  color: var(--coral);
+}
+
+/* Profile box */
+.user {
+  margin-bottom: 10px;
+  padding: 10px;
+  background: var(--mint);
+  border-radius: 8px;
+}
+
+/* Navigation links */
+.side a {
+  padding: 9px 10px;
+  border-radius: 6px;
+  color: var(--navy);
+  text-decoration: none;
+}
+
+/* Active page link */
+.side a.on {
+  font-weight: 600;
+  background: var(--mint);
+  border-left: 3px solid var(--coral);
+}
+
+/* Push Help / Sign Out to the bottom */
+.side .bottom {
+  margin-top: auto;
+}
