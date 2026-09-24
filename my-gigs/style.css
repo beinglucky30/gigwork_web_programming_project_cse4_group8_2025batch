@@ -194,3 +194,28 @@ h1 {
   background: #fde7e4;
   border-color: #f8c5bf;
 }
+
+
+/* =====================================================
+   5. STAT CARDS (4 summary boxes)
+   ===================================================== */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+/* Reusable card box */
+.card {
+  padding: 14px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.stats h2 {
+  margin: 6px 0;
+  font-size: 24px;
+}
+
