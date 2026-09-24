@@ -310,4 +310,44 @@ h3 {
   background: var(--navy);
 }
 
+/* =====================================================
+   8. PENDING APPLICATIONS (list)
+   ===================================================== */
+.list .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.list .item:last-child {
+  border: 0;
+}
+/* =====================================================
+   9. FOOTER STRIP
+   ===================================================== */
+.foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+/* =====================================================
+   10. RESPONSIVE (small screens)
+   ===================================================== */
+@media (max-width: 800px) {
+  body {
+    grid-template-columns: 1fr;   /* single column */
+  }
+
+  .side {
+    display: none;                /* hide sidebar */
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;   /* 2 cards per row */
+  }
+}
 
