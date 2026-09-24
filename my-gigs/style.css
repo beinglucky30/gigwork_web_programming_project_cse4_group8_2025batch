@@ -219,3 +219,95 @@ h1 {
   font-size: 24px;
 }
 
+/* =====================================================
+   6. TABS + FILTER BAR
+   ===================================================== */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.tabs button {
+  padding: 7px 14px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Selected tab */
+.tabs .on {
+  color: #fff;
+  background: var(--navy);
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filters input {
+  flex: 1;
+}
+
+
+/* =====================================================
+   7. ACTIVE DELIVERABLES (gig cards)
+   ===================================================== */
+h3 {
+  margin: 8px 0 12px;
+  font-size: 16px;
+}
+
+.gig {
+  margin-bottom: 14px;
+}
+
+/* Left content + right price row */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.gig h4 {
+  margin: 6px 0 2px;
+  font: 700 16px Georgia, serif;
+}
+
+.price {
+  font-size: 22px;
+  text-align: right;
+}
+
+/* Milestone box */
+.miles {
+  margin: 10px 0;
+  padding: 8px 10px;
+  background: var(--mint);
+  border-radius: 6px;
+}
+
+/* Progress bar */
+.bar {
+  height: 6px;
+  margin-top: 6px;
+  background: #dbe6e4;
+  border-radius: 3px;
+}
+
+.bar i {
+  display: block;
+  height: 100%;
+  background: var(--coral);
+  border-radius: 3px;
+}
+
+.bar i.navy {
+  background: var(--navy);
+}
+
+
