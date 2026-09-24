@@ -1,1 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GiGWork - Safety Dashboard</title>
+<link rel="icon" href="assets/logo.svg">
+<!-- Shared styles (sidebar, cards, buttons) + page-specific styles -->
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="safety.css">
+</head>
+<body>
 
+<!-- ========== SIDEBAR (same as My Gigs, "Safety Dashboard" is active) ========== -->
+<aside class="side">
+  <div class="logo"><img src="assets/logo.svg" alt="" width="24" height="24"> GiG<span>Work</span></div>
+  <div class="user"><b>Shivam Maurya</b><br><small>University Student • CS</small></div>
+  <a href="#"><img class="ico" src="assets/icons/home.svg" alt=""> Home</a>
+  <a href="index.html"><img class="ico" src="assets/icons/briefcase.svg" alt=""> My Gigs</a>
+  <a href="#"><img class="ico" src="assets/icons/compass.svg" alt=""> Explore</a>
+  <a href="#"><img class="ico" src="assets/icons/chart.svg" alt=""> Performance</a>
+  <a href="safety.html" class="on"><img class="ico" src="assets/icons/shield.svg" alt=""> Safety Dashboard</a>
+  <a href="#"><img class="ico" src="assets/icons/settings.svg" alt=""> Settings</a>
+  <div class="bottom">
+    <a href="#"><img class="ico" src="assets/icons/help.svg" alt=""> Help &amp; Support</a>
+    <a href="#" class="coral"><img class="ico" src="assets/icons/logout.svg" alt=""> Sign Out</a>
+  </div>
+</aside>
+
+<main>
+  <!-- ========== TOP BAR ========== -->
+  <div class="top"><input placeholder="Search gigs, employers, badges..."><img class="ico" src="assets/icons/bell.svg" alt=""></div>
+
+  <!-- ========== PAGE HEADER: title + live status + actions ========== -->
+  <div class="head">
+    <div>
+      <h1>Safety Dashboard — Live Location</h1>
+      <span class="live-tag">Live Tracking Active</span>
+    </div>
+    <div><button class="btn">Share Location</button> <button class="btn">Summary</button></div>
+  </div>
+
+  <!-- ========== CLIENT CARD: who you're meeting + alert + call ========== -->
+  <section class="card client">
+    <div class="avatar">AS</div>
+    <div>
+      <b>Aarav Sharma</b> <span class="tag">Identity Verified</span><br>
+      <small>Home Mathematics Tutoring • GIG-80219</small>
+    </div>
+    <div class="alert">
+      <b>Next check-in due today at 3:45 PM</b><br>
+      <small>Session runs 4:00 PM – 5:30 PM</small>
+    </div>
+    <button class="btn dark">Call Client</button>
+  </section>
+
+  <!-- ========== TWO-COLUMN LAYOUT ========== -->
+  <div class="safety-grid">
+
+    <!-- ---------- LEFT COLUMN: map + route log ---------- -->
+    <div class="col">
+
+      <!-- Live map (inline SVG, no external map needed) -->
+      <section class="card map">
+        <span class="chip">Geofence: Campus West Gate (75 m)</span>
+        <svg viewBox="0 0 600 280" role="img" aria-label="Live route map">
+          <!-- roads -->
+          <g stroke="#dfe8e7" stroke-width="10" fill="none">
+            <path d="M0 200 L600 120"/><path d="M120 0 L200 280"/>
+            <path d="M380 0 L330 280"/><path d="M0 60 L600 90"/>
+          </g>
+          <!-- geofence circle around destination -->
+          <circle cx="500" cy="80" r="46" fill="#f0604d" fill-opacity=".15" stroke="#f0604d" stroke-dasharray="4 3"/>
+          <!-- route travelled (solid) and remaining (dashed) -->
+          <path d="M70 230 C160 200 200 150 290 140" stroke="#14213d" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M290 140 C380 130 430 100 500 80" stroke="#f0604d" stroke-width="4" stroke-dasharray="6 6" fill="none"/>
+          <!-- start + destination -->
+          <circle cx="70" cy="230" r="6" fill="#14213d"/>
+          <circle cx="500" cy="80" r="6" fill="#f0604d"/>
+          <!-- live marker -->
+          <circle cx="290" cy="140" r="16" fill="#14213d" fill-opacity=".2"/>
+          <circle cx="290" cy="140" r="7" fill="#14213d" stroke="#fff" stroke-width="2"/>
+          <text x="306" y="128" font-size="11" fill="#14213d">Aarav Sharma • Live</text>
+        </svg>
+        <!-- zoom buttons -->
+        <div class="zoom"><button>+</button><button>−</button></div>
+        <!-- legend -->
+        <div class="legend">
+          <span><i style="background:#14213d"></i> Travelled</span>
+          <span><i style="background:#f0604d"></i> Remaining</span>
+          <span><i class="ring"></i> Geofence</span>
+        </div>
+      </section>
+
+      <!-- Live route milestones (timeline) -->
+      <section class="card">
+        <div class="row"><h3>Live Route Milestones</h3><small class="coral">View full log</small></div>
+        <ul class="timeline">
+          <li><b>10:45 AM</b><span>Check-in confirmed near Campus West Gate</span></li>
+          <li><b>10:30 AM</b><span>Left home, route sharing started</span></li>
+          <li><b>10:15 AM</b><span>Session accepted, escrow funded</span></li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- ---------- RIGHT COLUMN: metrics, controls, checklist, SOS ---------- -->
+    <div class="col">
+
+      <!-- Location metrics (2x2 grid) -->
+      <section class="card">
+        <h3>Location Metrics</h3>
+        <div class="metrics">
+          <div><small>Distance Away</small><b>1.8 km</b></div>
+          <div><small>Last Ping</small><b>10:45 AM</b></div>
+          <div><small>Battery</small><b>82%</b></div>
+          <div><small>GPS Accuracy</small><b>±5 m</b></div>
+        </div>
+      </section>
+
+      <!-- Safety controls (stacked buttons) -->
+      <section class="card">
+        <h3>Safety Controls</h3>
+        <div class="stack">
+          <button class="btn dark">Send Check-in Now</button>
+          <button class="btn soft">Share Live Location</button>
+          <button class="btn soft">Report a Concern</button>
+        </div>
+      </section>
+
+      <!-- Safety checklist -->
+      <section class="card">
+        <div class="row"><h3>Safety Checklist</h3><small>4 / 4</small></div>
+        <ul class="checks">
+          <li>Identity Verified <span class="ok">✓</span></li>
+          <li>Background Checked <span class="ok">✓</span></li>
+          <li>Public Location Confirmed <span class="ok">✓</span></li>
+          <li>Escrow Funded <span class="ok">✓</span></li>
+        </ul>
+      </section>
+
+      <!-- Emergency assistant -->
+      <section class="card sos">
+        <h3>Emergency Assistant</h3>
+        <button class="btn danger">Trigger SOS Emergency Alert</button>
+        <small>National Emergency Number: 112</small>
+      </section>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>
