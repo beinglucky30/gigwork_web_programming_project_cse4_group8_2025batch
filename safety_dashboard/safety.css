@@ -1,1 +1,303 @@
+/* =====================================================
+   GiGWork - Safety Dashboard (page-specific styles)
+   Load AFTER style.css so it can reuse the shared theme
+   ===================================================== */
 
+
+/* =====================================================
+   1. EXTRA COLOURS
+   ===================================================== */
+:root {
+  --danger: #d64545;   /* SOS + live tag */
+  --ok:     #2f9e6e;   /* verified ticks */
+}
+
+
+/* =====================================================
+   2. LIVE STATUS TAG (pulsing dot)
+   ===================================================== */
+.live-tag {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 3px 10px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  color: var(--danger);
+  background: #fdeaea;
+  border-radius: 10px;
+}
+
+.live-tag::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 6px;
+  background: var(--danger);
+  border-radius: 50%;
+  animation: pulse 1.4s infinite;
+}
+
+@keyframes pulse {
+  50% { opacity: .25; }
+}
+
+
+/* =====================================================
+   3. CLIENT CARD (avatar | info | alert | call button)
+   ===================================================== */
+.client {
+  display: grid;
+  grid-template-columns: auto 1fr 1.2fr auto;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--navy);
+  border-radius: 50%;
+}
+
+/* Coral alert box */
+.alert {
+  padding: 8px 12px;
+  color: var(--coral);
+  background: #fde7e4;
+  border: 1px solid #f8c5bf;
+  border-radius: 6px;
+}
+
+
+/* =====================================================
+   4. TWO-COLUMN PAGE LAYOUT
+   ===================================================== */
+.safety-grid {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 16px;
+}
+
+/* Each column stacks its cards */
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.col h3 {
+  margin: 0 0 10px;
+}
+
+.col .row h3 {
+  margin: 0;
+}
+
+
+/* =====================================================
+   5. MAP CARD
+   ===================================================== */
+.map {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+}
+
+.map svg {
+  display: block;
+  width: 100%;
+  background: var(--mint);
+}
+
+/* Floating label (top-left) */
+.chip {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 4px 10px;
+  font-size: 11px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+/* Zoom buttons (right side) */
+.zoom {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.zoom button {
+  width: 26px;
+  height: 26px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Legend strip under the map */
+.legend {
+  display: flex;
+  gap: 16px;
+  padding: 8px 14px;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.legend i {
+  display: inline-block;
+  width: 10px;
+  height: 4px;
+  margin-right: 5px;
+  border-radius: 2px;
+}
+
+.legend i.ring {
+  height: 10px;
+  background: #fde7e4;
+  border: 1px dashed var(--coral);
+  border-radius: 50%;
+}
+
+
+/* =====================================================
+   6. LOCATION METRICS (2 x 2 grid)
+   ===================================================== */
+.metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.metrics div {
+  padding: 8px 10px;
+  background: var(--mint);
+  border-radius: 6px;
+}
+
+.metrics small {
+  display: block;
+}
+
+.metrics b {
+  font: 700 18px Georgia, serif;
+}
+
+
+/* =====================================================
+   7. SAFETY CONTROLS (stacked buttons)
+   ===================================================== */
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stack .btn {
+  justify-content: center;
+}
+
+
+/* =====================================================
+   8. ROUTE TIMELINE (with vertical line)
+   ===================================================== */
+.timeline {
+  margin-top: 10px;
+  list-style: none;
+  border-left: 2px solid var(--line);
+}
+
+.timeline li {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  padding: 6px 0 6px 14px;
+}
+
+/* Dot on the line */
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 11px;
+  width: 10px;
+  height: 10px;
+  background: var(--coral);
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.timeline b {
+  min-width: 64px;
+}
+
+.timeline span {
+  color: var(--muted);
+}
+
+
+/* =====================================================
+   9. SAFETY CHECKLIST
+   ===================================================== */
+.checks {
+  margin-top: 8px;
+  list-style: none;
+}
+
+.checks li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.checks li:last-child {
+  border: 0;
+}
+
+.ok {
+  font-weight: 700;
+  color: var(--ok);
+}
+
+
+/* =====================================================
+   10. EMERGENCY ASSISTANT (SOS)
+   ===================================================== */
+.sos {
+  background: #fff5f5;
+  border-color: #f5c9c9;
+}
+
+.sos .btn.danger {
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 8px;
+  color: #fff;
+  background: var(--danger);
+  border-color: var(--danger);
+}
+
+
+/* =====================================================
+   11. RESPONSIVE (small screens)
+   ===================================================== */
+@media (max-width: 800px) {
+  .safety-grid,
+  .client {
+    grid-template-columns: 1fr;   /* stack everything */
+  }
+}
