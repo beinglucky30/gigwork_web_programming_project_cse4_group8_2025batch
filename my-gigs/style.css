@@ -145,3 +145,52 @@ select {
 h1 {
   font-size: 30px;
 }
+
+/* =====================================================
+   4. BUTTONS & BADGES
+   ===================================================== */
+
+/* Default button */
+.btn {
+  padding: 8px 14px;
+  font-weight: 600;
+  color: var(--navy);
+  background: #fff;
+  border: 1px solid var(--navy);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Button variants */
+.btn.dark {
+  color: #fff;
+  background: var(--navy);
+}
+
+.btn.soft {
+  font-size: 11px;
+  font-weight: 500;
+  background: var(--mint);
+  border-color: var(--line);
+}
+
+.btn.coral {
+  color: var(--coral);
+  background: #fde7e4;
+  border-color: #f8c5bf;
+}
+
+/* Status tags */
+.tag {
+  padding: 2px 8px;
+  font-size: 10px;
+  background: var(--mint);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.tag.hot {
+  color: var(--coral);
+  background: #fde7e4;
+  border-color: #f8c5bf;
+}
