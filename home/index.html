@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GiGWork - Home Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="side">
+    <div class="logo">GiG<span>Work</span><small>PRO</small></div>
+    <div class="user">
+      <b>Shivam Maurya <i class="verified">✓</i></b>
+      <small>University Student • CS</small>
+      <a href="#">View Profile →</a>
+    </div>
+    <nav>
+      <a href="#" class="on">⌂ <span>Home</span></a>
+      <a href="#">▣ <span>My Gigs</span><em>3</em></a>
+      <a href="#">⊙ <span>Explore</span></a>
+      <a href="#">↗ <span>Performance</span></a>
+      <a href="#">♧ <span>Safety Dashboard<i class="dot"></i></span></a>
+      <a href="#">⚙ <span>Settings</span></a>
+    </nav>
+    <div class="bottom">
+      <a href="#">◎ <span>Help &amp; Support</span></a>
+      <a href="#" class="coral">⇥ <span>Sign Out</span></a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Top search bar -->
+    <header class="top">
+      <label class="search"><span>⌕</span><input placeholder="Search gigs, employers, badges..." aria-label="Search"></label>
+      <button class="notification" aria-label="Notifications">♧<i></i></button>
+      <div class="avatar">SM</div>
+    </header>
+
+    <!-- Welcome header -->
+    <section class="welcome">
+      <div>
+        <h1>Welcome back, Shivam <span class="seal">✓</span></h1>
+        <p>Find opportunities, manage your gigs, and build your experience.</p>
+      </div>
+      <div class="welcome-actions">
+        <span class="visibility"><i></i> PROFILE VISIBILITY: ACTIVE</span>
+        <button class="btn dark">＋ &nbsp;Post a Quick Gig</button>
+      </div>
+    </section>
+
+    <!-- Safety monitoring banner -->
+    <section class="safety-banner">
+      <span class="safety-icon">♦</span>
+      <div class="safety-copy">
+        <b>SAFETY MONITORING <span class="status">Active</span></b>
+        <small>Location check-ins and emergency dispatch enabled for ongoing sessions.</small>
+      </div>
+      <a href="#">Open Safety Dashboard →</a>
+    </section>
+
+    <!-- Four summary cards -->
+    <section class="stats">
+      <article class="card metric">
+        <div class="metric-label">ACTIVE GIGS <span>◷</span></div>
+        <h2>2</h2>
+        <small class="coral">● In Progress (+1 pending review)</small>
+      </article>
+      <article class="card metric">
+        <div class="metric-label">COMPLETED GIGS <span>✓</span></div>
+        <h2>18</h2>
+        <small>100% on-time delivery record</small>
+      </article>
+      <article class="card metric">
+        <div class="metric-label">TOTAL EARNINGS <span class="coral">▣</span></div>
+        <h2>₹48,500</h2>
+        <small><b class="coral">↗ +₹12,500</b> this month</small>
+      </article>
+      <article class="card metric">
+        <div class="metric-label">AVERAGE RATING <span>★</span></div>
+        <h2>4.95 <i class="coral">★</i></h2>
+        <small>Based on 16 verified client reviews</small>
+      </article>
+    </section>
+
+    <!-- Recommended gigs and account information -->
+    <div class="columns">
+      <section class="recommended">
+        <div class="section-head">
+          <div><h2>Recommended for You</h2><small>Matches your BML Munjal verified background &amp; technical skill badges.</small></div>
+          <a class="coral" href="#">Explore All ›</a>
+        </div>
+        <div class="filters">
+          <button class="selected">All (14)</button><button>Academic &amp; Tutoring (6)</button>
+          <button>Tech &amp; Web (5)</button><button>Campus Errands (3)</button>
+        </div>
+
+        <article class="card gig">
+          <div class="gig-icon">⌂</div>
+          <div class="gig-main">
+            <div class="tags"><span>In-Person</span><span>2 Sessions/Week</span></div>
+            <h3>High School Algebra &amp; Pre-Calculus Weekly Tutor</h3>
+            <div class="meta">Client: Rohan Verma (Parent)　•　★ 4.9　•　BML Munjal University Library (1.2 km away)</div>
+            <p>Seeking an undergraduate STEM student to guide a 10th-grade student through advanced quadratic equations, trigonometry, and foundation pre-calculus twice a week in the quiet study room.</p>
+            <div class="tags skills"><span>Calculus</span><span>Algebra</span><span>STEM Tutoring</span></div>
+          </div>
+          <div class="gig-price"><strong>₹600 <small>/ hr</small></strong><small>Est. ₹1,200 / session</small><button class="btn dark">View Gig &amp; Apply</button></div>
+        </article>
+
+        <article class="card gig">
+          <div class="gig-icon">&lt;›</div>
+          <div class="gig-main">
+            <div class="tags"><span class="pink">Remote</span><span>Milestone Based</span></div>
+            <h3>WordPress Landing Page Audit &amp; Responsive Fixes</h3>
+            <div class="meta">Client: Verma Media Tech　•　★ 5.0　•　Fully Remote (Escrow Secured)</div>
+            <p>Audit mobile layout breaks, CSS flexbox overlaps, and clean up slow asset calls across our primary 4 service funnels. Clean Git commits and quick turn-around expected within 48 hours.</p>
+            <div class="tags skills"><span>WordPress</span><span>CSS/Flexbox</span><span>PageSpeed</span></div>
+          </div>
+          <div class="gig-price"><strong>₹4,500</strong><small class="coral">Fixed Price Budget</small><button class="btn dark">View Gig &amp; Apply</button></div>
+        </article>
+
+        <article class="card gig">
+          <div class="gig-icon">▤</div>
+          <div class="gig-main">
+            <div class="tags"><span>Campus Event</span><span>Saturday Only</span></div>
+            <h3>Campus Event Registration &amp; Badge Assistant</h3>
+            <div class="meta">Client: TechNova Innovation Summit　•　★ 4.8　•　Engineering Auditorium B</div>
+            <p>Assist our registration desk by scanning QR codes, issuing NFC delegate wristbands, and coordinating venue directions during morning peak entry. Breakfast and summit access included.</p>
+            <div class="tags skills"><span>Coordination</span><span>QR Checking</span><span>On-Site</span></div>
+          </div>
+          <div class="gig-price"><strong>₹450 <small>/ hr</small></strong><small>6 hrs = ₹2,700 fixed pay</small><button class="btn dark">View Gig &amp; Apply</button></div>
+        </article>
+      </section>
+
+      <aside class="right-column">
+        <section class="card credential">
+          <div class="section-head"><h3>Credential Status</h3><span class="tag">Tier 2 Verified</span></div>
+          <div class="school"><span>♙</span><div><b>BML Munjal University</b><small>CS Undergraduate • 2nd Year</small></div></div>
+          <div class="progress-title"><b>Tier 3 Master Freelancer</b><small class="coral">85% Complete</small></div>
+          <div class="progress"><i></i></div>
+          <p>Complete 2 more gigs with 4.8+ client reviews to unlock Top-Tier matching.</p>
+          <div class="velocity"><b>Bi-Weekly Velocity</b><strong>+24% vs Last Cycle</strong></div>
+          <svg class="sparkline" viewBox="0 0 300 56" preserveAspectRatio="none" aria-label="Bi-weekly velocity rising trend">
+            <path d="M0 45 C30 20 48 50 78 36 S120 4 148 31 S185 52 205 29 S247 35 264 17 L300 8" fill="none" stroke="#f0604d" stroke-width="2"/>
+            <path d="M0 45 C30 20 48 50 78 36 S120 4 148 31 S185 52 205 29 S247 35 264 17 L300 8 L300 56 L0 56Z" fill="#f0604d" opacity=".06"/>
+          </svg>
+        </section>
+
+        <section class="card activity">
+          <div class="section-head"><h3>Recent Activity</h3><small>Live Feed</small></div>
+          <div class="activity-row"><span>▣</span><div><b>Payment Disbursed</b><small>Python Data Cleanup (+₹3,500 deposited)</small></div><time>2h ago</time></div>
+          <div class="activity-row"><span class="coral">★</span><div><b>5.0 Star Feedback</b><small>Prof. Rajesh Iyer left a testimonial for CS Tutoring.</small></div><time>Yesterday</time></div>
+          <div class="activity-row"><span>✓</span><div><b>Application Accepted</b><small>Campus Tech Fair setup session confirmed.</small></div><time>2d ago</time></div>
+          <div class="activity-row"><span>♢</span><div><b>Identity Re-Verified</b><small>University Student ID check passed with 100% score.</small></div><time>3d ago</time></div>
+          <button class="btn soft full">View Complete Performance History</button>
+        </section>
+
+        <section class="card escrow">
+          <h3><span>♢</span> Escrow Protected</h3>
+          <p>All client payments are pre-funded into secure institutional escrow before work begins. Your completed tasks are guaranteed safe disbursals upon deliverable approval.</p>
+          <small><i></i> 100% Payout Security Guarantee</small>
+        </section>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>
