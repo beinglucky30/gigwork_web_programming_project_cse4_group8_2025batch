@@ -74,16 +74,8 @@ a {
   background: var(--mint);
 }
 .user b { font-size: 12px; }
-.user small, .user a { font-size: 10px; }
-.user a { color: var(--coral); }
-.verified {
-  color: var(--coral);
-  font-style: normal;
-  border: 1px solid;
-  border-radius: 50%;
-  font-size: 9px;
-  padding: 0 3px;
-}
+.user small { font-size: 10px; }
+
 .side nav {
   display: grid;
   gap: 3px;
@@ -97,21 +89,7 @@ a {
   background: var(--mint);
   border-left: 3px solid var(--coral);
 }
-.side nav em {
-  margin-left: auto;
-  padding: 2px 6px;
-  background: var(--mint);
-  border-radius: 9px;
-  font: normal 10px system-ui;
-}
-.dot {
-  float: right;
-  width: 6px;
-  height: 6px;
-  margin: 5px 0 0 8px;
-  background: var(--coral);
-  border-radius: 50%;
-}
+
 .bottom {
   display: grid;
   gap: 2px;
@@ -216,16 +194,7 @@ main {
   margin-top: 7px;
   color: #596570;
 }
-.seal {
-  display: inline-grid;
-  width: 20px;
-  height: 20px;
-  place-items: center;
-  background: var(--coral);
-  color: #fff;
-  font: 700 12px system-ui;
-  clip-path: polygon(50% 0,62% 12%,80% 8%,86% 27%,100% 38%,91% 54%,96% 74%,76% 82%,67% 100%,50% 90%,31% 100%,23% 81%,4% 75%,10% 55%,0 39%,15% 26%,20% 8%,39% 12%);
-}
+
 .welcome-actions {
   display: flex;
   align-items: center;
@@ -474,12 +443,7 @@ main {
   font-size: 10px;
 }
 .school small { font-size: 9px; }
-.progress-title, .velocity {
-  display: flex;
-  justify-content: space-between;
-  gap: 8px;
-  font-size: 9px;
-}
+.progress-title,
 .progress-title small { font-size: 9px; }
 .progress {
   height: 6px;
@@ -497,12 +461,6 @@ main {
 .credential p {
   color: #535e68;
   font-size: 9px;
-}
-.velocity { margin-top: 12px; }
-.sparkline {
-  width: 100%;
-  height: 48px;
-  margin-top: 5px;
 }
 .activity-row {
   display: grid;
