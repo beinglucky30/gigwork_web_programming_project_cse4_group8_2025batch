@@ -1,9 +1,4 @@
-/* =========================================================
-   GiGWork Vanilla CSS
-   No Tailwind, no CSS framework, and no external stylesheet.
-   ========================================================= */
 
-/* ---------- Design tokens ---------- */
 :root {
   --navy: #0a2540;
   --navy-dark: #071b2f;
