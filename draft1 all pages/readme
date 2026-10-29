@@ -1,0 +1,8 @@
+# Gigwork — Final Design 
+
+- Original page layouts, Tailwind classes, page-specific styling, and inline JavaScript are retained as much as possible.
+- Inline CSS has been moved to each page's `style.css`.
+- Every page is available at `<page-folder>/index.html`.
+- Start from the root `index.html` to browse the pages.
+- Tailwind CSS and Google Fonts still load from their original external CDN links, so internet access is required for those resources.
+- Links with clear destinations have been connected to local pages. Some links that refer to features not represented by a separate page remain placeholders.
