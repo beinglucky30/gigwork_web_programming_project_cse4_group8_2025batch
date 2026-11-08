@@ -80,4 +80,57 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    // ====================================
+    // SORTING FUNCTIONALITY
+    // ====================================
+
+    // Get the sorting dropdown
+    const sortDropdown = document.getElementById("sortGigs");
+
+    // Store the original order of the cards
+    const originalCards = Array.from(gigCards);
+
+    // Function to extract hourly payment
+    function getGigPrice(card) {
+
+        // Find the price text, such as ₹450
+        const priceElement = card.querySelector(".text-xl");
+
+        // Remove currency symbols and convert to a number
+        const price = Number(
+            priceElement.textContent.replace(/[^0-9.]/g, "")
+        );
+
+        return price;
+    }
+
+    // Function to sort gigs
+    function sortGigs() {
+
+        // Read the selected option
+        const selectedOption = sortDropdown.value;
+
+        // Create a copy of the original card array
+        let sortedCards = [...originalCards];
+
+        if (selectedOption === "highest") {
+
+            // Sort cards from highest to lowest price
+            sortedCards.sort(function (a, b) {
+                return getGigPrice(b) - getGigPrice(a);
+            });
+
+        }
+
+        // Add cards back in the new order
+        sortedCards.forEach(function (card) {
+            gigContainer.appendChild(card);
+        });
+
+    }
+
+    // Run sorting whenever dropdown selection changes
+    sortDropdown.addEventListener("change", sortGigs);
+
+
 });
