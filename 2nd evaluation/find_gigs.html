@@ -385,6 +385,177 @@
 <!-- END: SiteFooter -->
 
 
+<!-- =====================================
+     GIGWORK - VIEW GIG POPUP
+===================================== -->
+
+<div id="gigModal" class="gig-modal" role="dialog"
+     aria-modal="true" aria-labelledby="modalTitle"
+     aria-hidden="true">
+
+    <div class="gig-modal-content">
+
+        <!-- Close Button -->
+        <button id="closeGigModal" class="gig-modal-close"
+                type="button" aria-label="Close gig details">
+            &times;
+        </button>
+
+        <!-- Gig Title -->
+        <h2 id="modalTitle"></h2>
+
+        <!-- Employer Name -->
+        <p id="modalCompany"></p>
+
+        <!-- Gig Description -->
+        <p id="modalDescription"></p>
+
+        <!-- Hourly Payment -->
+        <div class="gig-modal-payment">
+            <span id="modalPrice"></span>
+            <span class="gig-modal-rate">/ hr</span>
+        </div>
+
+        <!-- Apply Now Button -->
+        <button id="applyNowButton" type="button">
+            Apply Now
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================
+     GIGWORK - APPLICATION FORM MODAL
+===================================== -->
+
+<div id="applicationModal"
+     class="gig-modal"
+     role="dialog"
+     aria-modal="true"
+     aria-labelledby="applicationTitle"
+     aria-hidden="true">
+
+    <div class="gig-modal-content">
+
+        <!-- Close Button -->
+        <button id="closeApplicationModal"
+                class="gig-modal-close"
+                type="button"
+                aria-label="Close application form">
+            &times;
+        </button>
+
+        <h2 id="applicationTitle" class="text-2xl font-extrabold mb-2">
+            Apply for a Gig
+        </h2>
+
+        <p class="text-sm text-slate-500 mb-6">
+            One step closer to your next opportunity.
+        </p>
+
+        <form id="gigApplicationForm" class="space-y-4">
+
+            <!-- Selected Gig -->
+            <div>
+                <label for="selectedGig"
+                       class="block text-sm font-semibold mb-1">
+                    Selected Gig
+                </label>
+
+                <input type="text"
+                       id="selectedGig"
+                       name="gigTitle"
+                       readonly
+                       class="w-full rounded-xl border border-slate-200 bg-slate-50 text-slate-700">
+            </div>
+
+            <!-- Full Name -->
+            <div>
+                <label for="applicantName"
+                       class="block text-sm font-semibold mb-1">
+                    Full Name
+                </label>
+
+                <input type="text"
+                       id="applicantName"
+                       name="studentName"
+                       placeholder="Enter your full name"
+                       minlength="2"
+                       maxlength="80"
+                       required
+                       class="w-full rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-brand-500">
+            </div>
+
+            <!-- Email -->
+            <div>
+                <label for="applicantEmail"
+                       class="block text-sm font-semibold mb-1">
+                    Email Address
+                </label>
+
+                <input type="email"
+                       id="applicantEmail"
+                       name="email"
+                       placeholder="student@example.com"
+                       required
+                       class="w-full rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-brand-500">
+            </div>
+
+            <!-- Skills -->
+            <div>
+                <label for="applicantSkills"
+                       class="block text-sm font-semibold mb-1">
+                    Your Skills
+                </label>
+
+                <input type="text"
+                       id="applicantSkills"
+                       name="skills"
+                       placeholder="e.g., Python, Excel, Communication"
+                       minlength="2"
+                       maxlength="200"
+                       required
+                       class="w-full rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-brand-500">
+            </div>
+
+            <!-- Reason -->
+            <div>
+                <label for="applicationReason"
+                       class="block text-sm font-semibold mb-1">
+                    Why should we hire you?
+                </label>
+
+                <textarea id="applicationReason"
+                          name="reason"
+                          rows="3"
+                          minlength="20"
+                          maxlength="1000"
+                          placeholder="Tell us why you're a good fit..."
+                          required
+                          class="w-full rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-brand-500"></textarea>
+            </div>
+
+            <!-- Feedback -->
+            <p id="applicationMessage"
+               class="hidden text-sm"
+               role="status"
+               aria-live="polite"></p>
+
+            <!-- Submit -->
+            <button type="submit"
+                    id="submitApplication"
+                    class="w-full bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3 rounded-xl transition-all">
+                Submit Application
+            </button>
+
+        </form>
+    </div>
+</div>
+
+
+
 
 <script src="script.js"></script>
 </body></html>

@@ -23,3 +23,152 @@ body {
     .custom-accent {
       accent-color: #6C3EF8;
     }
+
+/* =====================================
+   GIGWORK - VIEW GIG MODAL
+===================================== */
+
+/* Dark transparent background */
+.gig-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(30, 27, 46, 0.5);
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Show modal */
+.gig-modal.active {
+    display: flex;
+}
+
+/* Popup content */
+.gig-modal-content {
+    position: relative;
+    background: #ffffff;
+    width: 100%;
+    max-width: 480px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(30, 27, 46, 0.2);
+    animation: gigModalAppear 0.25s ease-out;
+}
+
+/* Close button */
+.gig-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    border: none;
+    background: #F4F0FF;
+    color: #582BE8;
+    font-size: 24px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Gig title */
+#modalTitle {
+    font-size: 24px;
+    font-weight: 800;
+    color: #1E1B2E;
+    margin-bottom: 8px;
+    padding-right: 35px;
+}
+
+/* Employer */
+#modalCompany {
+    color: #6C3EF8;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+/* Description */
+#modalDescription {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+/* Payment */
+.gig-modal-payment {
+    margin-bottom: 24px;
+}
+
+#modalPrice {
+    font-size: 26px;
+    font-weight: 800;
+    color: #1E1B2E;
+}
+
+.gig-modal-rate {
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* Apply button */
+#applyNowButton {
+    width: 100%;
+    background: #582BE8;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 13px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#applyNowButton:hover {
+    background: #471ecf;
+}
+
+/* Opening animation */
+@keyframes gigModalAppear {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gig-modal-content {
+        animation: none;
+    }
+}
+
+
+/* Application form refinements */
+
+#applicationModal .gig-modal-content {
+    max-width: 520px;
+}
+
+#applicationModal input,
+#applicationModal textarea {
+    font-size: 14px;
+}
+
+#applicationModal input:focus,
+#applicationModal textarea:focus {
+    outline-color: #6C3EF8;
+}
+
+#applicationModal textarea {
+    resize: vertical;
+}
