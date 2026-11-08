@@ -1,0 +1,377 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>GigWork - Find Your Next Opportunity | Student Gigs &amp; Micro-Internships</title>
+<!-- External Tailwind CSS CDN with forms and container queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<!-- FontAwesome for crisp UI icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#F4F0FF',
+              100: '#EAE2FE',
+              200: '#D5C5FC',
+              300: '#B69BF9',
+              400: '#926BF6',
+              500: '#6C3EF8',
+              600: '#582BE8',
+              700: '#471ecf',
+              800: '#3D1B9E',
+              900: '#2A116B',
+            },
+            surface: {
+              bg: '#FAF8FD',
+              card: '#FFFFFF',
+              border: '#ECE7F8',
+              subtle: '#F6F3FB',
+            }
+          },
+          boxShadow: {
+            card: '0 4px 20px -2px rgba(108, 62, 248, 0.05)',
+            'card-hover': '0 10px 30px -4px rgba(108, 62, 248, 0.12)',
+            pill: '0 2px 8px rgba(108, 62, 248, 0.15)',
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom stylesheet -->
+<link href="style.css" rel="stylesheet">
+
+</head>
+<body class="font-sans antialiased text-slate-800 bg-[#FAF8FD] min-h-screen flex flex-col selection:bg-brand-100 selection:text-brand-700">
+<!-- BEGIN: TopNavigation -->
+<header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#EDE8F5]" data-purpose="primary-header">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<!-- Brand Logo & Slogan Pill -->
+<div class="flex items-center space-x-3">
+<a class="flex items-center gap-1.5 focus:outline-none" href="#">
+<span class="text-2xl font-extrabold tracking-tight text-slate-900">Gig<span class="text-brand-500">work</span></span>
+<span class="w-2 h-2 rounded-full bg-brand-500 inline-block mb-1"></span>
+</a>
+<span class="hidden md:inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-brand-50 text-brand-600 border border-brand-100">
+            Small Gigs. Big Dreams.
+          </span>
+</div>
+<!-- Navigation Links -->
+<nav aria-label="Main Navigation" class="hidden lg:flex items-center space-x-1">
+<a class="px-3.5 py-1.5 rounded-full text-sm font-semibold bg-brand-500 text-white shadow-sm shadow-brand-500/20" href="#">Find Gigs</a>
+<a class="px-3 py-1.5 rounded-full text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors" href="#">Post a Gig</a>
+<a class="px-3 py-1.5 rounded-full text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors" href="#">How It Works</a>
+<a class="px-3 py-1.5 rounded-full text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors" href="#">Dashboard</a>
+<a class="px-3 py-1.5 rounded-full text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors" href="#">Wallet</a>
+<!-- Dropdown link -->
+<div class="relative group">
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-full text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors focus:outline-none">
+<span class="">Notifications</span>
+<span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
+<i class="fa-solid fa-chevron-down text-[10px] text-slate-400 group-hover:rotate-180 transition-transform duration-200 ml-0.5"></i>
+</button>
+</div>
+<a class="px-3 py-1.5 rounded-full text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors" href="#">Help &amp; Safety</a>
+</nav>
+<!-- User Authentication Actions -->
+<div class="flex items-center space-x-3">
+<a class="text-sm font-semibold text-slate-700 hover:text-brand-600 px-3 py-1.5 transition-colors" href="#">Sign In</a>
+<a class="inline-flex items-center justify-center px-4 py-1.5 rounded-full text-sm font-semibold text-white bg-brand-500 hover:bg-brand-600 shadow-sm shadow-brand-500/25 transition-all duration-200" href="#">
+            Get Started
+          </a>
+</div>
+</div>
+</div>
+</header>
+<!-- END: TopNavigation -->
+<!-- BEGIN: MainContent -->
+<main class="flex-grow">
+<!-- Hero & Search Section -->
+<section class="px-4 sm:px-6 lg:px-8 text-center max-w-6xl mx-auto pb-8 pt-12" data-purpose="hero-section">
+<!-- Live Counter Tag -->
+
+<!-- Main Headline -->
+<h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+        Find your next <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-indigo-600">opportunity</span>
+</h1>
+<p class="mt-3 text-sm sm:text-base text-slate-500 max-w-2xl mx-auto font-normal">Don't wait for your big break. Make your next move.</p>
+<!-- Primary Search Bar Container -->
+<div class="mt-7 max-w-4xl mx-auto bg-white p-2 rounded-2xl md:rounded-full border border-[#EDE8F5] shadow-card flex flex-col md:flex-row items-center gap-2" data-purpose="search-box"><!-- Text Input -->
+<div class="relative flex-1 w-full flex items-center pl-3">
+<i class="fa-solid fa-magnifying-glass text-slate-400 text-sm"></i>
+<input
+  id="gigSearch"
+  class="w-full border-0 focus:ring-0 text-sm text-slate-800 placeholder-slate-400 bg-transparent py-2.5 px-3"
+  placeholder="Search gigs (e.g., HTML/CSS, Reels, Tutor)..."
+  type="text">
+</div>
+<!-- Search Action Button -->
+<button id="searchButton" class="w-full md:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl md:rounded-full bg-brand-500 hover:bg-brand-600 text-white font-semibold text-sm transition-all shadow-md shadow-brand-500/20 whitespace-nowrap">
+<i class="fa-solid fa-bolt text-xs"></i>
+<span class="">Search Gigs</span>
+</button></div>
+<!-- Trending Chips Bar -->
+
+</section>
+<!-- BEGIN: FeaturedOpportunityBanner -->
+
+<!-- END: FeaturedOpportunityBanner -->
+<!-- BEGIN: MarketplaceTwoColumnLayout -->
+<div class="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+<div class="flex flex-col lg:flex-row gap-6 items-start">
+<!-- Left Filter Sidebar -->
+
+<!-- Right Marketplace Area -->
+<section class="flex-1 w-full" data-purpose="listings-container">
+<!-- Listings Header Bar -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 gap-3">
+<div class="flex items-center gap-2.5">
+<h2 class="text-lg font-bold text-slate-900">Available Gigs</h2>
+
+</div>
+<!-- Sort dropdown -->
+<div class="flex items-center gap-2 text-xs">
+<span class="text-slate-400 font-medium">Sort by:</span>
+<select class="border border-slate-200 rounded-lg text-xs font-semibold text-slate-700 py-1.5 pl-2.5 pr-7 focus:ring-brand-400 focus:border-brand-400 bg-white cursor-pointer shadow-sm">
+<option>Recommended</option>
+<option>Highest Paying</option>
+<option>Recently Posted</option>
+<option>Fewest Applicants</option>
+
+</select>
+</div>
+</div>
+<!-- Cards Grid: 3-Column Photographic Layout -->
+<div id="gigContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+<!-- Card 1: Daycare Assistant & Baby Care Helper -->
+<article class="bg-white rounded-2xl border border-[#ECE7F8] shadow-card hover:shadow-lg hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between overflow-hidden" data-purpose="gig-card">
+<div>
+<!-- Clean Photographic Header (No Overlays) -->
+<div class="relative w-full aspect-video overflow-hidden rounded-t-2xl">
+<img alt="Authentic realistic candid photography of a friendly young Indian female daycare teacher in casual kurti sitting on the floor reading an illustrated storybook with smiling Indian toddler children in a bright, colorful modern preschool nursery playroom in India. Natural soft lighting, realistic Indian classroom setting, no text, high detail." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX1toODIy3XEXFoCL2FDupJfGYxVXBONq6zUqp4Z3h-RlJEN-QmjHyDAd6CTXZMnW-1_U81HutpRSvMKf0oDt-lCfEQPoqfwhh-T5Ab8fCC1wXz-u05_LpLkDpWBnHPW1Ei04tHTcC_kQw7tLkmaLt0xKEifS_Du484olielkYCmm3EDDAlMIWOxKPTjdCP50wBoHxo_yMyKYzhFHXOEdZsA9pBvQPXVvLmsVbSA">
+</div>
+<!-- Card Body -->
+<div class="p-4 flex flex-col"><h3 class="font-bold text-slate-900 text-base leading-snug">Daycare Assistant</h3><p class="text-[13px] text-slate-500 mt-1.5 leading-relaxed">Little minds, big smiles. Make playtime count.</p><div class="flex items-baseline gap-1 mt-3"><span class="text-xl font-bold text-slate-900">₹450</span><span class="text-xs text-slate-500 font-medium">/ hr</span></div></div>
+</div>
+<!-- Card Footer -->
+<div class="p-4 pt-0 mt-auto">
+<div class="flex items-center justify-between text-xs text-slate-500 mb-3 border-t border-slate-100 pt-3">
+<span class="font-medium text-slate-700">Little Stars Daycare</span>
+<span class="font-semibold text-amber-500 flex items-center gap-1">
+<i class="fa-solid fa-star text-[10px]"></i> 4.9 <span class="text-slate-400 font-normal">(42)</span>
+</span>
+</div>
+<button class="w-full py-2.5 bg-[#582BE8] hover:bg-[#471ecf] text-white font-medium text-sm rounded-xl transition-all shadow-sm">View Gig</button>
+</div>
+</article>
+<!-- Card 2: Instagram Reels & Post Editing Assistant -->
+<article class="bg-white rounded-2xl border border-[#ECE7F8] shadow-card hover:shadow-lg hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between overflow-hidden" data-purpose="gig-card">
+<div>
+<!-- Clean Photographic Header (No Overlays) -->
+<div class="relative w-full aspect-video overflow-hidden rounded-t-2xl">
+<img alt="Authentic candid photography of a stylish young Indian female college student content creator sitting at a clean study desk editing Instagram video reels on a laptop, with a smartphone mounted on a mini desk tripod with a warm ring light, subtle Indian dorm apartment room decor in background, warm natural lighting, realistic and modern, no text." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaH-LBUqayAoTn9MIQH0niC79BnKbfyWk3sepw_VZjPjmpK7MfkRIvxVm_2Snxw4msClEUgi30g_8exIYeJaBZpag5pNi3PtsiDabfUE8wd4Nz8zKm8r6YNeLywp7qIdpjmvl_cz1Xj9XHqCubp75ambNcJAjn5yRU0vdjYYayTOKF4urS-QcFkDD82HusDR8jEoRENDGtOzwShfqfU4c7xKfxJ12O9_NVKyxYXg">
+</div>
+<!-- Card Body -->
+<div class="p-4 flex flex-col"><h3 class="font-bold text-slate-900 text-base leading-snug">Reels &amp; Content Editor</h3><p class="text-[13px] text-slate-500 mt-1.5 leading-relaxed">Got an eye for viral? Turn raw clips into scroll-stoppers.</p><div class="flex items-baseline gap-1 mt-3"><span class="text-xl font-bold text-slate-900">₹550</span><span class="text-xs text-slate-500 font-medium">/ hr</span></div></div>
+</div>
+<!-- Card Footer -->
+<div class="p-4 pt-0 mt-auto">
+<div class="flex items-center justify-between text-xs text-slate-500 mb-3 border-t border-slate-100 pt-3">
+<span class="font-medium text-slate-700">CreatorHub Media</span>
+<span class="font-semibold text-amber-500 flex items-center gap-1">
+<i class="fa-solid fa-star text-[10px]"></i> 5.0 <span class="text-slate-400 font-normal">(19)</span>
+</span>
+</div>
+<button class="w-full py-2.5 bg-[#582BE8] hover:bg-[#471ecf] text-white font-medium text-sm rounded-xl transition-all shadow-sm">View Gig</button>
+</div>
+</article>
+<!-- Card 3: Python Data Cleansing for Research -->
+<article class="bg-white rounded-2xl border border-[#ECE7F8] shadow-card hover:shadow-lg hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between overflow-hidden" data-purpose="gig-card">
+<div>
+<!-- Clean Photographic Header (No Overlays) -->
+<div class="relative w-full aspect-video overflow-hidden rounded-t-2xl">
+<img alt="Authentic photography of an Indian male college undergraduate student sitting at a wooden desk in a modern Indian university lab library, coding Python scripts on a slim laptop with terminal and code visible, wearing casual hoodie, soft ambient library lighting, natural genuine expression, high quality, no text or overlays." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRxV7x7nDxE-ua-5EQAyV4DWbeOKbyC0HJmWD2vhMPyr1uUh1fi2QqeU-nQIy3a3xD-Kg--rQVFTKUmjb-v5SgCnkp0mbMXz7s-9ECkWR_gbQd7EiikCoGFArnTq9TFcL-ZWnDtJLABR36z6gRgrGI3K_YtuLGvN14iBazVIMWl8FXpMfwTleww_tM1FRt8oA02JlTQSTtOpIFcWxuOOt9eeGeMqo5N9X0u6ktuA">
+</div>
+<!-- Card Body -->
+<div class="p-4 flex flex-col"><h3 class="font-bold text-slate-900 text-base leading-snug">Python Data Analyst</h3><p class="text-[13px] text-slate-500 mt-1.5 leading-relaxed">Love finding patterns? Turn messy data into meaningful insights.</p><div class="flex items-baseline gap-1 mt-3"><span class="text-xl font-bold text-slate-900">₹600</span><span class="text-xs text-slate-500 font-medium">/ hr</span></div></div>
+</div>
+<!-- Card Footer -->
+<div class="p-4 pt-0 mt-auto">
+<div class="flex items-center justify-between text-xs text-slate-500 mb-3 border-t border-slate-100 pt-3">
+<span class="font-medium text-slate-700">Lab Director</span>
+<span class="font-semibold text-amber-500 flex items-center gap-1">
+<i class="fa-solid fa-star text-[10px]"></i> 4.9 <span class="text-slate-400 font-normal">(7)</span>
+</span>
+</div>
+<button class="w-full py-2.5 bg-[#582BE8] hover:bg-[#471ecf] text-white font-medium text-sm rounded-xl transition-all shadow-sm">View Gig</button>
+</div>
+</article>
+<!-- Card 4: Move-In Packing & Furniture -->
+<article class="bg-white rounded-2xl border border-[#ECE7F8] shadow-card hover:shadow-lg hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between overflow-hidden" data-purpose="gig-card">
+<div>
+<!-- Clean Photographic Header (No Overlays) -->
+<div class="relative w-full aspect-video overflow-hidden rounded-t-2xl">
+<img alt="Authentic candid photography of two young Indian university male college students in jeans and casual t-shirts cheerfully carrying brown cardboard moving boxes and assembling simple study desk furniture in an Indian college hostel dorm room, daylight through window, relatable campus student atmosphere, no text or overlays." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUxeN1QyLw-ZhGRdztf-u_i4-_v0VJvpVTo-5nOMqzZWq789VSSGW08Oyw5rKu_hf32aIsuUM8pewp5rEgluuQD6iVqAmK-r5Pc0eRJGbcoybfYoFhw2H7Q50VIHATpsoyIswA9sd3JK5QzuXReOpQfSqG0SCBEu4j4FMPRtO0Z0bEdnlb4dV3nPFk6RJnr_3ax05-VMAcUVUF2k3-9MuopMsIMYQz3jDLmC-lOA">
+</div>
+<!-- Card Body -->
+<div class="p-4 flex flex-col"><h3 class="font-bold text-slate-900 text-base leading-snug">Moving &amp; Setup Helper</h3><p class="text-[13px] text-slate-500 mt-1.5 leading-relaxed">A little muscle, a little hustle. Help students settle in.</p><div class="flex items-baseline gap-1 mt-3"><span class="text-xl font-bold text-slate-900">₹500</span><span class="text-xs text-slate-500 font-medium">/ hr</span></div></div>
+</div>
+<!-- Card Footer -->
+<div class="p-4 pt-0 mt-auto">
+<div class="flex items-center justify-between text-xs text-slate-500 mb-3 border-t border-slate-100 pt-3">
+<span class="font-medium text-slate-700">Grad Student</span>
+<span class="font-semibold text-amber-500 flex items-center gap-1">
+<i class="fa-solid fa-star text-[10px]"></i> 4.7 <span class="text-slate-400 font-normal">(14)</span>
+</span>
+</div>
+<button class="w-full py-2.5 bg-[#582BE8] hover:bg-[#471ecf] text-white font-medium text-sm rounded-xl transition-all shadow-sm">View Gig</button>
+</div>
+</article>
+<!-- Card 5: Student IT Support Assistant -->
+<article class="bg-white rounded-2xl border border-[#ECE7F8] shadow-card hover:shadow-lg hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between overflow-hidden" data-purpose="gig-card">
+<div>
+<!-- Clean Photographic Header (No Overlays) -->
+<div class="relative w-full aspect-video overflow-hidden rounded-t-2xl">
+<img alt="Authentic photography of two Indian university students, a young Indian woman and young Indian man, smiling and collaborating over a laptop screen troubleshooting software code in a bright Indian campus library computer center, candid student technology support, natural lighting, realistic Indian students, no text or overlays." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_sG54h8HrLipcAhNf3gr1lShOpnroP148-Kl7eAeSBc6H1BW89DhIeRg7-EBF-vDLcgh8DyTdSzQ2bj0zR1LQTDAxGSwWMsxY64SlIaPuMQe1nZISnp3SZn7KWos2bykkcSM0WpbE1tZ5eIFjy7vB9W-KWAgRUv-AdjIgIxzi5QZuvRb0qF2NnXNMCg84jBk84CLJKuGO1xEu7g3ewhtpWr3jXSvjcUfT2ybpWQ">
+</div>
+<!-- Card Body -->
+<div class="p-4 flex flex-col"><h3 class="font-bold text-slate-900 text-base leading-snug">Student IT Assistant</h3><p class="text-[13px] text-slate-500 mt-1.5 leading-relaxed">Be the tech hero on campus. Fix glitches and save the day.</p><div class="flex items-baseline gap-1 mt-3"><span class="text-xl font-bold text-slate-900">₹450</span><span class="text-xs text-slate-500 font-medium">/ hr</span></div></div>
+</div>
+<!-- Card Footer -->
+<div class="p-4 pt-0 mt-auto">
+<div class="flex items-center justify-between text-xs text-slate-500 mb-3 border-t border-slate-100 pt-3">
+<span class="font-medium text-slate-700">University IT Services</span>
+<span class="font-semibold text-amber-500 flex items-center gap-1">
+<i class="fa-solid fa-star text-[10px]"></i> 4.8 <span class="text-slate-400 font-normal">(23)</span>
+</span>
+</div>
+<button class="w-full py-2.5 bg-[#582BE8] hover:bg-[#471ecf] text-white font-medium text-sm rounded-xl transition-all shadow-sm">View Gig</button>
+</div>
+</article>
+<!-- Card 6: Research Data Entry Assistant -->
+<article class="bg-white rounded-2xl border border-[#ECE7F8] shadow-card hover:shadow-lg hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between overflow-hidden" data-purpose="gig-card">
+<div>
+<!-- Clean Photographic Header (No Overlays) -->
+<div class="relative w-full aspect-video overflow-hidden rounded-t-2xl">
+<img alt="Authentic photography of an Indian female undergraduate research student working diligently with printed research papers, open notebook, pen, and laptop spreadsheet in an academic university research workspace in India, natural soft daylight, authentic Indian student, no text or overlays." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIpXjD_I9LSL_3IOjQ0KmFfRMCc5M8pIfML--B62I_m0qSVGpHHIh-nk9wAWwjflmf_8pp-3wLEYB_o8UjpP8hfOz0CEai9QTA7RlZa4gn6zYJqv-a46E4gO9SZnbmxKMeGs6Rk2V_JNd541Awsb2rhj9rjfnhUrMd3spCSWjw7ZHKXkXWx9TAFtjyM4Q5YSSDV8NsV3Fo-aTaMOzkhkzsmOBwADSV_bmT_68MLQ">
+</div>
+<!-- Card Body -->
+<div class="p-4 flex flex-col"><h3 class="font-bold text-slate-900 text-base leading-snug">Research Data Assistant</h3><p class="text-[13px] text-slate-500 mt-1.5 leading-relaxed">Curious by nature? Turn scattered data into clear answers.</p><div class="flex items-baseline gap-1 mt-3"><span class="text-xl font-bold text-slate-900">₹500</span><span class="text-xs text-slate-500 font-medium">/ hr</span></div></div>
+</div>
+<!-- Card Footer -->
+<div class="p-4 pt-0 mt-auto">
+<div class="flex items-center justify-between text-xs text-slate-500 mb-3 border-t border-slate-100 pt-3">
+<span class="font-medium text-slate-700">Research Analytics Lab</span>
+<span class="font-semibold text-amber-500 flex items-center gap-1">
+<i class="fa-solid fa-star text-[10px]"></i> 4.8 <span class="text-slate-400 font-normal">(18)</span>
+</span>
+</div>
+<button class="w-full py-2.5 bg-[#582BE8] hover:bg-[#471ecf] text-white font-medium text-sm rounded-xl transition-all shadow-sm">View Gig</button>
+</div>
+</article>
+</div>
+<!-- Pagination Controls -->
+<div class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+<p class="text-xs text-slate-500 font-medium">Showing 1-6 of 128 gigs</p>
+<div class="inline-flex items-center gap-1.5 text-xs font-semibold">
+<button class="w-8 h-8 rounded-lg bg-brand-500 text-white flex items-center justify-center shadow-sm">1</button>
+<button class="w-8 h-8 rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-brand-50 hover:text-brand-600 transition flex items-center justify-center">2</button>
+<button class="w-8 h-8 rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-brand-50 hover:text-brand-600 transition flex items-center justify-center">3</button>
+<button class="w-8 h-8 rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-brand-50 hover:text-brand-600 transition flex items-center justify-center" title="Next Page">›</button>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- END: MarketplaceTwoColumnLayout -->
+</main>
+<!-- END: MainContent -->
+<!-- BEGIN: SiteFooter -->
+<footer class="bg-white border-t border-[#EDE8F5] pt-12 pb-8" data-purpose="primary-footer">
+<div class="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Footer Columns -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-slate-100 text-xs">
+<!-- Brand Info -->
+<div class="space-y-3">
+<div class="flex items-center gap-1.5">
+<span class="text-xl font-extrabold tracking-tight text-slate-900">Gig<span class="text-brand-500">work</span></span>
+<span class="w-1.5 h-1.5 rounded-full bg-brand-500 mb-1"></span>
+<span class="ml-2 px-2 py-0.5 text-[10px] font-bold rounded-full bg-brand-50 text-brand-600 border border-brand-100">
+              SafeEscrow UPI
+            </span>
+</div>
+<p class="text-slate-500 leading-relaxed font-normal">
+            Empowering Indian college students and young creators with verified micro-gigs, instant UPI earnings, and digital portfolio credits.
+          </p>
+<div class="flex items-center space-x-3 text-slate-400 pt-1">
+<a class="hover:text-brand-500 transition-colors" href="#"><i class="fa-brands fa-x-twitter text-sm"></i></a>
+<a class="hover:text-brand-500 transition-colors" href="#"><i class="fa-brands fa-instagram text-sm"></i></a>
+<a class="hover:text-brand-500 transition-colors" href="#"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+<a class="hover:text-brand-500 transition-colors" href="#"><i class="fa-brands fa-discord text-sm"></i></a>
+</div>
+</div>
+<!-- Links Col 1: Explore -->
+<div>
+<h4 class="font-bold text-slate-900 uppercase tracking-wider mb-3">Explore Marketplace</h4>
+<ul class="space-y-2 text-slate-600">
+<li class=""><a class="hover:text-brand-500 transition" href="#">Browse Tech Gigs</a></li>
+<li class=""><a class="hover:text-brand-500 transition" href="#">Design &amp; Content Tasks</a></li>
+<li class=""><a class="hover:text-brand-500 transition" href="#">Campus Ambassador Roles</a></li>
+<li class=""><a class="hover:text-brand-500 transition" href="#">Post 1st Micro-Gig</a></li>
+<li class=""><a class="hover:text-brand-500 transition" href="#">Student Earnings Dashboard</a></li>
+</ul>
+</div>
+<!-- Links Col 2: Trust & Safety -->
+<div>
+<h4 class="font-bold text-slate-900 uppercase tracking-wider mb-3">Trust &amp; Safety</h4>
+<ul class="space-y-2 text-slate-600">
+<li class=""><a class="hover:text-brand-500 transition" href="#">DigiLocker College ID Verification</a></li>
+<li class=""><a class="hover:text-brand-500 transition" href="#">RBI Escrow Framework</a></li>
+<li class=""><a class="hover:text-brand-500 transition" href="#">Guardian Consent for &lt;18</a></li>
+<li class=""><a class="hover:text-brand-500 transition" href="#">Dispute Resolution Help</a></li>
+<li class=""><a class="hover:text-brand-500 transition" href="#">Anti-Scam Student Pledge</a></li>
+</ul>
+</div>
+<!-- Links Col 3: Community -->
+<div>
+<h4 class="font-bold text-slate-900 uppercase tracking-wider mb-3">Community Hub</h4>
+<p class="text-slate-500 mb-2 leading-relaxed">
+            Made with <i class="fa-solid fa-heart text-rose-500 text-[10px]"></i> for students across Bengaluru, Delhi NCR, Jaipur, Lucknow, Mumbai, Pune, and beyond.
+          </p>
+<div class="mt-3 p-3 bg-brand-50/70 border border-brand-100 rounded-xl">
+<span class="font-bold text-brand-700 block text-[11px] mb-0.5">24x7 Student Help</span>
+<span class="text-slate-500 text-[11px]">Chat with our campus support team via WhatsApp or portal ticket anytime.</span>
+</div>
+</div>
+</div>
+<!-- Bottom Copyright & Policies -->
+<div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 gap-3">
+<div class="">
+          © 2025 Gigwork India Technologies Pvt. Ltd. All rights reserved.
+        </div>
+<div class="flex items-center space-x-4">
+<a class="hover:text-slate-600 transition" href="#">Privacy Policy</a>
+<span class="">•</span>
+<a class="hover:text-slate-600 transition" href="#">Terms of Service</a>
+<span class="">•</span>
+<a class="hover:text-slate-600 transition" href="#">Safety Guidelines</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: SiteFooter -->
+
+
+
+<script src="script.js"></script>
+</body></html>
