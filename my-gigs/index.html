@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GiGWork - My Gigs</title>
+<!-- Link to the CSS file -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- ========== SIDEBAR: logo, profile, navigation ========== -->
+<aside class="side">
+  <div class="logo">GiG<span>Work</span></div>
+  <div class="user"><b>Shivam Maurya</b><br><small>University Student • CS</small></div>
+  <a href="#">Home</a>
+  <a href="#" class="on">My Gigs</a>
+  <a href="#">Explore</a>
+  <a href="#">Performance</a>
+  <a href="#">Safety Dashboard</a>
+  <a href="#">Settings</a>
+  <div class="bottom"><a href="#">Help &amp; Support</a><a href="#" class="coral">Sign Out</a></div>
+</aside>
+<main>
+ <!-- ========== TOP BAR: search ========== -->
+  <div class="top"><input placeholder="Search gigs, employers, badges..."></div>
+
+  <!-- ========== PAGE HEADER: title + action buttons ========== -->
+  <div class="head">
+    <div>
+      <small class="coral">WORKSPACE // EMPLOYMENT PORTAL</small>
+      <h1>My Gigs</h1>
+      <small>Track your applications, ongoing tasks, completed milestones, and posted requests.</small>
+    </div>
+    <div><button class="btn">Export Summary</button> <button class="btn dark">Find More Gigs</button></div>
+  </div>
+<!-- ========== STAT CARDS (4 summary boxes) ========== -->
+  <section class="stats">
+    <div class="card"><small>Committed Earnings</small><h2>₹14,500</h2><small class="coral">₹4,200 Protected in Escrow</small></div>
+    <div class="card"><small>Active Obligations</small><h2>2 Gigs</h2><small class="muted">1 Session Today</small></div>
+    <div class="card"><small>Application Ratio</small><h2>75% Response</h2><small class="coral">1 interview pending</small></div>
+    <div class="card"><small>Verified Safety</small><h2>Level 3 Escrow</h2><small class="coral">Geofence Check-in ON</small></div>
+  </section>
+
+  <!-- ========== TABS + FILTERS ========== -->
+  <div class="tabs">
+    <button class="on">Active 2</button><button>Applied 4</button><button>Completed 18</button><button>Saved 7</button><button>Posted 0</button>
+  </div>
+  <div class="filters">
+    <input placeholder="Search your gigs...">
+    <select><option>All Categories</option></select>
+    <select><option>Status: Any</option></select>
+    <select><option>Sort: Due Date (Earliest)</option></select>
+  </div>
+ <!-- ========== ACTIVE DELIVERABLES ========== -->
+  <h3>Active Deliverables</h3>
+
+  <!-- Gig card 1: in progress -->
+  <article class="card gig">
+    <div class="row">
+      <div>
+        <small>REF: GIG-80219</small> <span class="tag hot">In Progress</span> <span class="tag">Session Scheduled Today 4:00 PM</span>
+        <h4>Home Mathematics Tutoring (Calculus Prep)</h4>
+        <small>Aarav Sharma (Identity Verified Client) • Tutoring • In-Person (1.8 km away)</small>
+      </div>
+      <div class="price">₹750<small>/hr</small><br><small class="coral">₹2,250 in Escrow Vault</small></div>
+    </div>
+    <div class="miles">
+      <div class="row"><small><b>Milestone:</b> 3 of 6 sessions completed (Target Final: Oct 30)</small><small class="coral">Next geofence check-in: Today at 3:45 PM</small></div>
+      <div class="bar"><i style="width:50%"></i></div>
+    </div>
+    <div class="row">
+      <button class="btn coral">Open Safety Live Tracking</button>
+      <div><button class="btn soft">Message Client</button> <button class="btn dark">View Details</button></div>
+    </div>
+  </article>
+<!-- Gig card 2: accepted -->
+  <article class="card gig">
+    <div class="row">
+      <div>
+        <small>REF: GIG-89402</small> <span class="tag">Accepted • Starts Tomorrow</span> <span class="tag">Contract Bound</span>
+        <h4>Campus Sustainability Research Survey Assistant</h4>
+        <small>Dept. of Environmental Studies • Faculty Sponsored Project • Hybrid / Campus Lab</small>
+      </div>
+      <div class="price">₹500<small>/hr</small><br><small>Oct 26 - Nov 05</small></div>
+    </div>
+    <div class="miles">
+      <div class="row"><small><b>Milestone:</b> Pre-orientation &amp; Safety Compliance (Due by Oct 26)</small><small>Digital W-9 &amp; Campus Pass Cleared</small></div>
+      <div class="bar"><i class="navy" style="width:12%"></i></div>
+    </div>
+    <div class="row">
+      <span></span>
+      <div><button class="btn soft">Review Agreement</button> <button class="btn soft">Contact Coordinator</button> <button class="btn dark">View Details</button></div>
+    </div>
+  </article>
+ <!-- ========== PENDING APPLICATIONS ========== -->
+  <h3>Pending Applications</h3>
+  <section class="card list">
+    <div class="item"><div><b>WordPress Landing Page Audit</b><br><small>Venta Digital Media • Quote: ₹4,500 Fixed • Applied 2 days ago</small></div><span class="tag">Under Review</span></div>
+    <div class="item"><div><b>Junior QA Tester for Student Note-taking App</b> <span class="tag hot">Action Required</span><br><small>StudyFlow Labs • Quote: ₹600 / hr • Applied Yesterday</small></div><button class="btn dark">Schedule Time</button></div>
+    <div class="item"><div><b>Biochemistry Flashcard Illustration &amp; Formatting</b><br><small>MedPrep Student Guild • Quote: ₹2,500 Fixed • Applied 4 days ago</small></div><span class="tag">Under Review</span></div>
+    <div class="item"><div><b>Annual Tech Symposium Logistics Lead</b><br><small>Dean of Student Affairs • Quote: ₹6,000 Honorarium • Applied 5 days ago</small></div><span class="tag">Shortlisted</span></div>
+  </section>
+
+  <!-- ========== FOOTER STRIP ========== -->
+  <div class="card foot"><small>Showing 2 active gigs and 4 active applications</small><button class="btn dark">Explore Open Gigs</button></div>
+</main>
+
+</body>
+</html>

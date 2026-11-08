@@ -1,0 +1,353 @@
+/* =====================================================
+   GiGWork - My Gigs Dashboard
+   Theme: Navy & Coral
+   ===================================================== */
+
+
+/* =====================================================
+   1. THEME VARIABLES + BASE STYLES
+   ===================================================== */
+:root {
+  --navy:  #14213d;   /* main text + dark buttons */
+  --coral: #f0604d;   /* accent colour */
+  --mint:  #eef7f6;   /* page + soft backgrounds */
+  --card:  #ffffff;   /* card background */
+  --line:  #e3eceb;   /* borders + dividers */
+  --muted: #6b7a86;   /* secondary text */
+}
+
+/* Reset default spacing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Page layout: sidebar (210px) + main content */
+body {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  min-height: 100vh;
+  font: 13px/1.4 system-ui, Arial, sans-serif;
+  color: var(--navy);
+  background: var(--mint);
+}
+
+/* Serif font for headings and prices */
+h1,
+h2,
+h3,
+.price {
+  font-family: Georgia, serif;
+}
+
+/* Small helper text */
+small,
+.muted {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* Coral text helper */
+.coral {
+  color: var(--coral);
+}
+
+
+/* =====================================================
+   2. SIDEBAR
+   ===================================================== */
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px;
+  background: #fff;
+  border-right: 1px solid var(--line);
+}
+
+/* Logo */
+.logo {
+  margin-bottom: 10px;
+  font: 700 20px Georgia, serif;
+}
+
+.logo span {
+  color: var(--coral);
+}
+
+/* Profile box */
+.user {
+  margin-bottom: 10px;
+  padding: 10px;
+  background: var(--mint);
+  border-radius: 8px;
+}
+
+/* Navigation links */
+.side a {
+  padding: 9px 10px;
+  border-radius: 6px;
+  color: var(--navy);
+  text-decoration: none;
+}
+
+/* Active page link */
+.side a.on {
+  font-weight: 600;
+  background: var(--mint);
+  border-left: 3px solid var(--coral);
+}
+
+/* Push Help / Sign Out to the bottom */
+.side .bottom {
+  margin-top: auto;
+}
+
+/* =====================================================
+   3. MAIN AREA + TOP BAR + PAGE HEADER
+   ===================================================== */
+main {
+  max-width: 1000px;
+  padding: 16px 24px;
+}
+
+/* Search bar row */
+.top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.top input {
+  flex: 1;
+}
+
+/* Shared style for inputs and dropdowns */
+input,
+select {
+  padding: 8px 10px;
+  font: inherit;
+  background: var(--mint);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+/* Title + action buttons */
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+/* =====================================================
+   4. BUTTONS & BADGES
+   ===================================================== */
+
+/* Default button */
+.btn {
+  padding: 8px 14px;
+  font-weight: 600;
+  color: var(--navy);
+  background: #fff;
+  border: 1px solid var(--navy);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Button variants */
+.btn.dark {
+  color: #fff;
+  background: var(--navy);
+}
+
+.btn.soft {
+  font-size: 11px;
+  font-weight: 500;
+  background: var(--mint);
+  border-color: var(--line);
+}
+
+.btn.coral {
+  color: var(--coral);
+  background: #fde7e4;
+  border-color: #f8c5bf;
+}
+
+/* Status tags */
+.tag {
+  padding: 2px 8px;
+  font-size: 10px;
+  background: var(--mint);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.tag.hot {
+  color: var(--coral);
+  background: #fde7e4;
+  border-color: #f8c5bf;
+}
+
+
+/* =====================================================
+   5. STAT CARDS (4 summary boxes)
+   ===================================================== */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+/* Reusable card box */
+.card {
+  padding: 14px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.stats h2 {
+  margin: 6px 0;
+  font-size: 24px;
+}
+
+/* =====================================================
+   6. TABS + FILTER BAR
+   ===================================================== */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.tabs button {
+  padding: 7px 14px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Selected tab */
+.tabs .on {
+  color: #fff;
+  background: var(--navy);
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filters input {
+  flex: 1;
+}
+
+
+/* =====================================================
+   7. ACTIVE DELIVERABLES (gig cards)
+   ===================================================== */
+h3 {
+  margin: 8px 0 12px;
+  font-size: 16px;
+}
+
+.gig {
+  margin-bottom: 14px;
+}
+
+/* Left content + right price row */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.gig h4 {
+  margin: 6px 0 2px;
+  font: 700 16px Georgia, serif;
+}
+
+.price {
+  font-size: 22px;
+  text-align: right;
+}
+
+/* Milestone box */
+.miles {
+  margin: 10px 0;
+  padding: 8px 10px;
+  background: var(--mint);
+  border-radius: 6px;
+}
+
+/* Progress bar */
+.bar {
+  height: 6px;
+  margin-top: 6px;
+  background: #dbe6e4;
+  border-radius: 3px;
+}
+
+.bar i {
+  display: block;
+  height: 100%;
+  background: var(--coral);
+  border-radius: 3px;
+}
+
+.bar i.navy {
+  background: var(--navy);
+}
+
+/* =====================================================
+   8. PENDING APPLICATIONS (list)
+   ===================================================== */
+.list .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.list .item:last-child {
+  border: 0;
+}
+/* =====================================================
+   9. FOOTER STRIP
+   ===================================================== */
+.foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+/* =====================================================
+   10. RESPONSIVE (small screens)
+   ===================================================== */
+@media (max-width: 800px) {
+  body {
+    grid-template-columns: 1fr;   /* single column */
+  }
+
+  .side {
+    display: none;                /* hide sidebar */
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;   /* 2 cards per row */
+  }
+}
+
